@@ -41,7 +41,7 @@ class BubbleSort(Scene):
                 arrow.target.move_to(self.nodes[i].circle.get_arc_center() + UP)
                 self.play(MoveToTarget(arrow))
                 if self.nodes[i+1].value < self.nodes[i].value:
-                    self.switchNodes(i, i+1)
+                    self.swapNodes(i, i+1)
                     swapped = True
 
             self.remove(arrow)
@@ -63,7 +63,7 @@ class BubbleSort(Scene):
             circleAnimations.append(GrowFromCenter(node.circle))
         self.play(*circleAnimations)
 
-    def switchNodes(self, fromIndex, toIndex):
+    def swapNodes(self, fromIndex, toIndex):
         fromNode = self.nodes[fromIndex]
         toNode = self.nodes[toIndex]
         
