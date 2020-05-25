@@ -1,4 +1,10 @@
-from manimlib.imports import *
+from manimlib.constants import UP, LEFT, RIGHT, GREEN
+from manimlib.animation.growing import GrowFromCenter
+from manimlib.animation.transform import MoveToTarget
+from manimlib.mobject.geometry import Arrow, Circle
+from manimlib.mobject.svg.tex_mobject import TextMobject
+from manimlib.scene.scene import Scene
+
 
 class BubbleSort(Scene):
     nodes = []
@@ -46,7 +52,7 @@ class BubbleSort(Scene):
 
             self.remove(arrow)
             nbIterations = nbIterations + 1
-            self.wait(0.5)
+            self.wait(0.1)
 
         self.remove(nbIterationsObj)
 

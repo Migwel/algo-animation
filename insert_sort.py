@@ -1,4 +1,10 @@
-from manimlib.imports import *
+from manimlib.animation.growing import GrowFromCenter
+from manimlib.animation.transform import MoveToTarget
+from manimlib.constants import LEFT, RIGHT, UP, GREEN
+from manimlib.mobject.geometry import Arrow, Circle
+from manimlib.mobject.svg.tex_mobject import TextMobject
+from manimlib.scene.scene import Scene
+
 
 class InsertSort(Scene):
     nodes = []
